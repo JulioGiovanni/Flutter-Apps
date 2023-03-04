@@ -1,4 +1,8 @@
 # App de crypto currencies
+## Links:
+### Repo: https://github.com/JulioGiovanni/Flutter-Apps/tree/main/list_views_cripto
+### Video: https://drive.google.com/drive/folders/1wTRAoTfreB-dE70q0QP6Q7yjNRGZ-Wc3
+
 
 ## Temas vistos:
 
