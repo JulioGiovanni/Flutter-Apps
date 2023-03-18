@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tiptime/provider/tip_provider.dart';
 
-import '../widgets/radio_list.dart';
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -63,7 +61,14 @@ class _HomePageState extends State<HomePage> {
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      provider.calculateTotalTip();
+                      if (provider.service.text.isNotEmpty) {
+                        provider.calculateTotalTip();
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content:
+                                    Text('Ingrese el total del servicio')));
+                      }
                     },
                     child: const Text('Calculate')),
                 const SizedBox(height: 30),

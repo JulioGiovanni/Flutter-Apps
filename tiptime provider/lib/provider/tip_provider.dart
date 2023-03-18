@@ -34,7 +34,10 @@ class TipProvider with ChangeNotifier {
       notifyListeners();
       return;
     } else {
-      _total = double.parse(_totalController.text) + _roundTipAmount();
+      final double tip = double.parse(_totalController.text) +
+          double.parse(_totalController.text) * _tipPercentage;
+      _total = tip.floorToDouble();
+
       notifyListeners();
       return;
     }
